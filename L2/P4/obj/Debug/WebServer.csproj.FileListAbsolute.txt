@@ -1,0 +1,12 @@
+C:\Users\Administrator\source\repos\webServer\WebServer\bin\Debug\WebServer.exe
+C:\Users\Administrator\source\repos\webServer\WebServer\bin\Debug\WebServer.pdb
+C:\Users\Administrator\source\repos\webServer\WebServer\obj\Debug\WebServer.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\webServer\WebServer\obj\Debug\WebServer.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\webServer\WebServer\obj\Debug\WebServer.exe
+C:\Users\Administrator\source\repos\webServer\WebServer\obj\Debug\WebServer.pdb
+C:\Users\Administrator\source\repos\coursesAsp\L2\P4\bin\Debug\WebServer.exe
+C:\Users\Administrator\source\repos\coursesAsp\L2\P4\bin\Debug\WebServer.pdb
+C:\Users\Administrator\source\repos\coursesAsp\L2\P4\obj\Debug\WebServer.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\coursesAsp\L2\P4\obj\Debug\WebServer.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\coursesAsp\L2\P4\obj\Debug\WebServer.exe
+C:\Users\Administrator\source\repos\coursesAsp\L2\P4\obj\Debug\WebServer.pdb
