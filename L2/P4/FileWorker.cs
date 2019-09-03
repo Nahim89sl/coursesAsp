@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using Newtonsoft.Json;
 
 namespace WebServer
 {
@@ -25,7 +26,7 @@ namespace WebServer
 
         public string AnswerToRequest(string request)
         {
-            //try finde site name
+            //try find site name
             Console.WriteLine($"Request: {request}");
             Regex siteRgx = new Regex("(?<=:"+ portSrv + "/).*?(?=/)");
             Match match = siteRgx.Match(request);
@@ -54,6 +55,20 @@ namespace WebServer
                     {
                         Console.WriteLine($"Return answer");
                         string fileContent = File.ReadAllText(filePath);
+                        //dinaminc load json 
+                        if(filePath.Contains("participants.html"))
+                        {
+                            string jsonString = File.ReadAllText(webSrvFolder + siteName + "\\wwwroot\\json");
+                            var users = JsonConvert.DeserializeObject<List<Participant>>(jsonString);
+                            string userListTopage = "";
+                            foreach(var guest in users)
+                            {
+                                userListTopage += "<li>" + guest.guest+ "</li>";
+                            }
+                            fileContent = fileContent.Replace("{prticipants}", userListTopage); 
+                        }
+
+
                         return fileContent;
                     }
                     else

@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Net;
 using System.IO;
+using System.Net;
+using WebServer.Controllers;
 
 namespace WebServer
 {
@@ -12,14 +10,25 @@ namespace WebServer
         static void Main(string[] args)
         {
             string port = "8881";
-            string serverFolder = "C:\\Users\\Administrator\\source\\repos\\coursesAsp\\L2\\sites\\";
+            string serverFolder = "C:\\Users\\Administrator\\source\\repos\\coursesAsp\\L2\\P4\\sites\\";
+            var server = new SuperWebServer();
+            server.StartWork(port, serverFolder);
+            server.Dispose();
+            Console.ReadLine();
+        }
+    }
 
-            FileWorker fileAnswer = new FileWorker(port, serverFolder);
 
+
+    class SuperWebServer : IDisposable
+    {
+        private HttpListener listner;
+        public void StartWork(string port, string rootDirectory)
+        {
             HttpListener listner = new HttpListener();
-            listner.Prefixes.Add("http://*:"+port+"/");
+            listner.Prefixes.Add("http://*:" + port + "/");
             listner.Start();
-            Console.WriteLine("Web Server wait connections on port:"+port);
+            Console.WriteLine("Web Server wait connections on port:" + port);
             while (true)
             {
                 HttpListenerContext context = listner.GetContext();
@@ -30,16 +39,20 @@ namespace WebServer
                     Console.WriteLine("Stop listner");
                     break;
                 }
-                HttpListenerResponse responce = context.Response;//wait request
-
-                string responceStr = fileAnswer.AnswerToRequest(request.Url.ToString());
-                byte[] buffer = System.Text.Encoding.UTF8.GetBytes(responceStr);
-                responce.ContentLength64 = buffer.Length;
-                Stream output = responce.OutputStream;
-                output.Write(buffer, 0, buffer.Length);
-                output.Close();
+                //HttpListenerResponse responce = context.Response;   
+                RoutingUrl.Route(context,port, rootDirectory);
             }
-            Console.ReadLine();
+        }
+
+         public void Dispose()
+        {
+            this.listner.Close();
         }
     }
+
+
+
+
+
+
 }

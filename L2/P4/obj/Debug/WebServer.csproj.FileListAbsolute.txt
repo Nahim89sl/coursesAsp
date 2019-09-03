@@ -10,3 +10,15 @@ C:\Users\Administrator\source\repos\coursesAsp\L2\P4\obj\Debug\WebServer.csprojA
 C:\Users\Administrator\source\repos\coursesAsp\L2\P4\obj\Debug\WebServer.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\coursesAsp\L2\P4\obj\Debug\WebServer.exe
 C:\Users\Administrator\source\repos\coursesAsp\L2\P4\obj\Debug\WebServer.pdb
+C:\Users\admin\Source\Repos\Nahim89sl\coursesAsp\L2\P4\bin\Debug\WebServer.exe
+C:\Users\admin\Source\Repos\Nahim89sl\coursesAsp\L2\P4\bin\Debug\WebServer.pdb
+C:\Users\admin\Source\Repos\Nahim89sl\coursesAsp\L2\P4\bin\Debug\Newtonsoft.Json.dll
+C:\Users\admin\Source\Repos\Nahim89sl\coursesAsp\L2\P4\bin\Debug\Newtonsoft.Json.xml
+C:\Users\admin\Source\Repos\Nahim89sl\coursesAsp\L2\P4\obj\Debug\WebServer.csprojAssemblyReference.cache
+C:\Users\admin\Source\Repos\Nahim89sl\coursesAsp\L2\P4\obj\Debug\WebServer.csproj.CoreCompileInputs.cache
+C:\Users\admin\Source\Repos\Nahim89sl\coursesAsp\L2\P4\obj\Debug\WebServer.csproj.CopyComplete
+C:\Users\admin\Source\Repos\Nahim89sl\coursesAsp\L2\P4\obj\Debug\WebServer.exe
+C:\Users\admin\Source\Repos\Nahim89sl\coursesAsp\L2\P4\obj\Debug\WebServer.pdb
+C:\Users\Administrator\source\repos\coursesAsp\L2\P4\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Administrator\source\repos\coursesAsp\L2\P4\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Administrator\source\repos\coursesAsp\L2\P4\obj\Debug\WebServer.csproj.CopyComplete
