@@ -1,0 +1,21 @@
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Список участников</title>
+ </head>
+ <body>
+	<form action="void" method="post">
+		  Имя: <input type="text" name="participant"><br>
+		  Причина:<input type="text" name="reason"><br>
+		  Пойдете?: <input type="checkbox" name="visitParty" value="true"><br>
+		  
+		  <input type="submit" value="Submit">
+	</form>
+	
+	<h2>Люди которые пойдут тусить</h2>
+	  <ul>
+		{participants}
+	 </ul>
+	 <a href='index.html'>На главную</a>
+ </body>
+</html>
