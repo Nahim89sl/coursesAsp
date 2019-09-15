@@ -22,20 +22,38 @@ namespace WebServer.Controllers
         {
             string filePath = siteFolder + "\\participants.html";
             string pageText = "err";
-            if (File.Exists(filePath))
+            FileInfo fileInfo = new FileInfo(siteFolder + "\\data\\json");
+            var time1 = fileInfo.LastWriteTime;
+
+            FileInfo fileInfoCach = new FileInfo(siteFolder + "\\data\\participantsKach");
+            var time2 = fileInfoCach.LastWriteTime;
+            var time3 = DateTime.Now;
+
+
+            if((time1 > time2) ||(time3.Minute - time2.Minute > 5))
             {
-                string htmlList = "";
-                pageText = File.ReadAllText(filePath);
-                var participants = PartService.ListAttendent();
-                if (participants != null)
+                if (File.Exists(filePath))
                 {
-                    foreach (var user in participants)
+                    string htmlList = "";
+                    pageText = File.ReadAllText(filePath);
+                    var participants = PartService.ListAttendent();
+                    if (participants != null)
                     {
-                        htmlList += $"<li>{user.Name}</li>";
+                        foreach (var user in participants)
+                        {
+                            htmlList += $"<li>{user.Name}</li>";
+                        }
                     }
+                    pageText = pageText.Replace("{participants}", htmlList);
+                    File.WriteAllText(siteFolder + "\\data\\participantsKach", pageText);
                 }
-                pageText = pageText.Replace("{participants}", htmlList);
             }
+            else
+            {
+                pageText = File.ReadAllText(siteFolder + "\\data\\participantsKach");
+            }
+
+           
             return pageText;
         }
     }

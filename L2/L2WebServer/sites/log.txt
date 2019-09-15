@@ -108,3 +108,50 @@
 2019-09-12 15:24:25 ERROR: Wromng Url format http://localhost:8881/favicon.ico
 2019-09-12 15:24:28 INFO: try find site site2 on server
 2019-09-12 15:24:28 ERROR: Wromng Url format http://localhost:8881/favicon.ico
+2019-09-16 00:54:51 INFO: Web Server wait connections on port: 8881
+2019-09-16 00:55:32 INFO: try find site site1 on server
+2019-09-16 00:55:33 ERROR: Wromng Url format http://localhost:8881/favicon.ico
+2019-09-16 00:55:35 INFO: try find site site1 on server
+2019-09-16 00:55:35 ERROR: Wromng Url format http://localhost:8881/favicon.ico
+2019-09-16 00:56:04 ERROR: Wromng Url format http://localhost:8881/favicon.ico
+2019-09-16 00:56:05 INFO: try find site site1 on server
+2019-09-16 00:57:58 INFO: Web Server wait connections on port: 8881
+2019-09-16 00:58:00 ERROR: Wromng Url format http://localhost:8881/favicon.ico
+2019-09-16 00:58:01 INFO: try find site site1 on server
+2019-09-16 00:58:33 ERROR: Wromng Url format http://localhost:8881/favicon.ico
+2019-09-16 00:59:58 INFO: try find site site1 on server
+2019-09-16 01:00:11 ERROR: Wromng Url format http://localhost:8881/favicon.ico
+2019-09-16 01:00:17 INFO: try find site site1 on server
+2019-09-16 01:01:12 INFO: Web Server wait connections on port: 8881
+2019-09-16 01:01:20 INFO: try find site site1 on server
+2019-09-16 01:01:23 ERROR: Wromng Url format http://localhost:8881/favicon.ico
+2019-09-16 01:01:30 INFO: try find site site1 on server
+2019-09-16 01:01:48 ERROR: Wromng Url format http://localhost:8881/favicon.ico
+2019-09-16 01:01:57 INFO: try find site site1 on server
+2019-09-16 01:01:57 INFO: try find site site1 on server
+2019-09-16 01:02:15 ERROR: Wromng Url format http://localhost:8881/favicon.ico
+2019-09-16 01:02:15 ERROR: Wromng Url format http://localhost:8881/favicon.ico
+2019-09-16 01:02:40 INFO: try find site site1 on server
+2019-09-16 01:02:40 ERROR: Wromng Url format http://localhost:8881/favicon.ico
+2019-09-16 01:02:40 INFO: try find site site1 on server
+2019-09-16 01:02:47 ERROR: Wromng Url format http://localhost:8881/favicon.ico
+2019-09-16 01:03:01 INFO: try find site site1 on server
+2019-09-16 01:03:01 ERROR: Wromng Url format http://localhost:8881/favicon.ico
+2019-09-16 01:03:01 INFO: try find site site1 on server
+2019-09-16 01:06:04 INFO: Web Server wait connections on port: 8881
+2019-09-16 01:06:08 INFO: try find site site1 on server
+2019-09-16 01:07:53 INFO: Web Server wait connections on port: 8881
+2019-09-16 01:07:57 INFO: try find site site1 on server
+2019-09-16 01:08:08 ERROR: Wromng Url format http://localhost:8881/favicon.ico
+2019-09-16 01:08:14 INFO: try find site site1 on server
+2019-09-16 01:08:59 INFO: Web Server wait connections on port: 8881
+2019-09-16 01:09:04 INFO: try find site site1 on server
+2019-09-16 01:11:05 INFO: Web Server wait connections on port: 8881
+2019-09-16 01:11:07 INFO: try find site site1 on server
+2019-09-16 01:11:21 ERROR: Wromng Url format http://localhost:8881/favicon.ico
+2019-09-16 01:11:26 INFO: try find site site1 on server
+2019-09-16 01:17:01 INFO: Web Server wait connections on port: 8881
+2019-09-16 01:17:08 INFO: try find site site1 on server
+2019-09-16 01:17:33 ERROR: Wromng Url format http://localhost:8881/favicon.ico
+2019-09-16 01:17:41 INFO: try find site site1 on server
+2019-09-16 01:17:48 ERROR: Wromng Url format http://localhost:8881/favicon.ico
