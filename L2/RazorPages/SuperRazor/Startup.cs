@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using SuperRazor.Models;
+using SuperRazor.DAL;
 
 namespace SuperRazor
 {
@@ -33,7 +34,7 @@ namespace SuperRazor
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            services.AddTransient<IParticipantRepository, ParticipantRepository>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<SuperRazorContext>(options =>

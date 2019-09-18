@@ -1,0 +1,15 @@
+﻿@page
+@model SuperRazor.Pages.VoteModel
+@{
+    ViewData["Title"] = "Vote";
+}
+
+<h2>Принять участие</h2>
+
+<form method="post">
+    Имя:<br>
+    <input type="text" name="name"><br>
+    Иду:<br>
+    <input type="checkbox" name="attend"><br><br>
+    <input type="submit" value="Send">
+</form>
