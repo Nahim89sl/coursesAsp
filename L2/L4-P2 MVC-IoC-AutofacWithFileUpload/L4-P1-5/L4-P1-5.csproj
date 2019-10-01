@@ -146,7 +146,6 @@
     <Compile Include="Models\Participant.cs" />
     <Compile Include="Models\Party.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModel\ParticipantView.cs" />
     <Compile Include="ViewModel\PartyDetailsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -197,7 +196,9 @@
     <Content Include="Views\Party\Index.cshtml" />
     <Content Include="Views\Participant\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Infrastructure\logs\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

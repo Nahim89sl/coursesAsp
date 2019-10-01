@@ -43,8 +43,5 @@ namespace L4_P1_5.Logic
         {
             ParticipantsRepository.Save(partyId, name, isAttend, "unknown.png");
         }
-
-
-
     }
 }

@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
 </head>
+
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -26,13 +27,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.RouteLink("Агрегатор вечеринок", new { controller = "Home", action = "Index" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    @Html.RouteLink("Главная", new { controller = "Home", action = "Index" })
-                    <li><a asp-page="/Participants">Вечеринка</a></li>
-                    <li><a asp-page="/Vote">Принять участие</a></li>
+                    <li>@Html.RouteLink("Главная", new { controller = "Home", action = "Index" })</li>
                 </ul>
             </div>
         </div>
@@ -41,6 +39,8 @@
     <partial name="_CookieConsentPartial" />
 
     <div class="container body-content">
+        <br>
+        <br>
         @RenderBody()
         <hr />
         <footer>

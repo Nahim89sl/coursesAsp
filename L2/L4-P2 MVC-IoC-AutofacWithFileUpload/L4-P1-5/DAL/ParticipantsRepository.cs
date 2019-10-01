@@ -12,8 +12,7 @@ namespace L4_P1_5.DAL
         List<Participant> List();
         void Save(int partyId, string name, bool isAttend,string avatar);
         void Delete(string name);
-        Participant Get(string name);
-
+        Participant GetUser(string name);
     }
     
     public class ParticipantsRepository : IParticipantsRepository
@@ -31,14 +30,14 @@ namespace L4_P1_5.DAL
             return Participants;
         }
 
-        public Participant Get(string name)
+        public Participant GetUser(string name)
         {
             return Participants.FirstOrDefault(x => x.Name == name);
         }
 
         public void Save(int partyId, string name, bool isAttend,string avatar)
         {
-            var participant = Get(name);
+            var participant = GetUser(name);
             if (participant != null)
             {
                 Delete(name);
@@ -52,7 +51,7 @@ namespace L4_P1_5.DAL
 
         public void Delete(string name)
         {
-            var participant = Get(name);
+            var participant = GetUser(name);
             Participants.Remove(participant);
 
             Commit();

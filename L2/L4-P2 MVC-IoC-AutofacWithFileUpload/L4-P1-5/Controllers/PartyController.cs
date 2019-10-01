@@ -23,10 +23,6 @@ namespace L4_P1_5.Controllers
             var attendants = PartyService.ListAttendants(party.Id).Select(x => x).ToList();
             var model = new PartyDetailsViewModel { PartyId = party.Id, Date = party.Date, Title = party.Title, Location = party.Location, Attendants = attendants };
 
-            HttpContext.Session["LastViewParties"] += $",{party.Id}";
-
-
-
             return View(model);
         }
 
@@ -35,17 +31,7 @@ namespace L4_P1_5.Controllers
         {
             PartyService.Vote(partyId, name, isAttend == "on");
 
-            Logger.Info($"{name} -> {PartyService.GetParty(partyId).Title} : {isAttend}");
-
             return RedirectToAction("Index", new { id = partyId });
-        }
-
-        [HttpGet]
-        public ActionResult GetLastViewParties()
-        {
-            var ids = HttpContext.Session["LastViewParties"].ToString().Split(',');
-            var partyes = PartyService.GetIncomingParties();
-            return View();
         }
 
     }

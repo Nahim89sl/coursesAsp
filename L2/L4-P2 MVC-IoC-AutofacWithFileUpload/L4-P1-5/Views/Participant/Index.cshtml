@@ -2,7 +2,20 @@
 
 
 
-<h2>Привет уважаемый пользователь </h2>
 
 
-<h5>Выбирай понравившуюся и присоединяйся!</h5>
+<h3>Данные по участнику @Model.Name</h3>
+<img src="~/Images/users/@Model.Avatar" height="50" width="50">
+
+
+@using (Html.BeginForm("UploadAva", "Participant", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+        
+    <input type="file" name="avaFile">
+    <input type="hidden" name="userName" value="@Model.Name" />
+    <input type="submit" value="Загрузить">
+}
+
+
+
+

@@ -1,7 +1,6 @@
 ﻿using L4_P1_5.DAL;
 using L4_P1_5.Infrastructure;
 using L4_P1_5.Logic;
-using L4_P1_5.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,33 +12,31 @@ namespace L4_P1_5.Controllers
     public class ParticipantController : Controller
     {
         // GET: Participant
-        private IParticipantsRepository ParticipantsService { get; }
+        private IParticipantsRepository ParticipantsRepository { get; }
         private ILogger Logger { get; }
 
         public ParticipantController(IParticipantsRepository participantsRepository, ILogger logger)
         {
-            ParticipantsService = participantsRepository;
+            ParticipantsRepository = participantsRepository;
             Logger = logger;
         }
+        public ActionResult Index(string name)
+        {            
+             var participant = ParticipantsRepository.GetUser(name);
+             return View(participant);
 
-
-
-        public ActionResult Index()
-        {
-            if (RouteData.Values["name"] != null)
-            {
-                var participant = ParticipantsService.Get(RouteData.Values["name"].ToString());
-
-                var vi = new ParticipantView (participant);
-                return View(participant);
-
-            }
-            return View();
         }
-
-        
-
-
-
+        [HttpPost]
+        public ActionResult UploadAva(string userName,HttpPostedFileBase avaFile)
+        {
+            string filename = System.IO.Path.GetFileName(avaFile.FileName);
+            if(filename!=null)
+            {
+                avaFile.SaveAs(Server.MapPath("~/Images/users/ava_"+filename));
+                var user = ParticipantsRepository.GetUser(userName);
+                ParticipantsRepository.Save(user.PartyId, user.Name, user.IsAttend, "ava_" + filename);
+            }
+            return RedirectToAction("Index", "Participant",new { name = userName });
+        }
     }
 }
