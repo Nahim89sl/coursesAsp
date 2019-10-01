@@ -31,3 +31,12 @@ C:\Users\Administrator\source\repos\coursesAsp\L2\L2WebServer\obj\Debug\WebServe
 C:\Users\Administrator\source\repos\coursesAsp\L2\L2WebServer\obj\Debug\WebServer.csproj.CopyComplete
 C:\Users\Administrator\source\repos\coursesAsp\L2\L2WebServer\obj\Debug\WebServer.exe
 C:\Users\Administrator\source\repos\coursesAsp\L2\L2WebServer\obj\Debug\WebServer.pdb
+C:\Users\admin\source\repos\coursesAsp\L2\L2WebServer\bin\Debug\WebServer.exe
+C:\Users\admin\source\repos\coursesAsp\L2\L2WebServer\bin\Debug\WebServer.pdb
+C:\Users\admin\source\repos\coursesAsp\L2\L2WebServer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\admin\source\repos\coursesAsp\L2\L2WebServer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\admin\source\repos\coursesAsp\L2\L2WebServer\obj\Debug\WebServer.csprojAssemblyReference.cache
+C:\Users\admin\source\repos\coursesAsp\L2\L2WebServer\obj\Debug\WebServer.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\coursesAsp\L2\L2WebServer\obj\Debug\WebServer.csproj.CopyComplete
+C:\Users\admin\source\repos\coursesAsp\L2\L2WebServer\obj\Debug\WebServer.exe
+C:\Users\admin\source\repos\coursesAsp\L2\L2WebServer\obj\Debug\WebServer.pdb

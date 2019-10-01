@@ -4,8 +4,19 @@
 		<meta charset='utf8'>
 	</head>
 	<body>
-	<a href='participants.html'>participants</a>
+	<button id="list">participants</button>
 	
+	<script>
+	    document.getElementById("list").onclick = () => {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'participants.html', false);
+            xhr.send();
+
+            if (xhr.status === 200) {
+                document.write(xhr.responseText);
+            }
+        };
+	</script>
 	
 	</body>
 </html>

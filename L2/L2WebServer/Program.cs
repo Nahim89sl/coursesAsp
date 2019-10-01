@@ -13,8 +13,8 @@ namespace WebServer
             
 
             string port = "8881";
-            ServiceLocator.RootDir = "C:\\Users\\Administrator\\source\\repos\\coursesAsp\\L2\\L2WebServer\\sites\\";
-            ServiceLocator.ViewsDir = "C:\\Users\\Administrator\\source\\repos\\coursesAsp\\L2\\L2WebServer\\Views\\";
+            ServiceLocator.RootDir = "C:\\Users\\admin\\source\\repos\\coursesAsp\\L2\\L2WebServer\\sites\\";
+            ServiceLocator.ViewsDir = "C:\\Users\\admin\\source\\repos\\coursesAsp\\L2\\L2WebServer\\Views\\";
             ServiceLocator.Register<ILogger>(typeof(FileLogger));
 
             var server = new SuperWebServer();
