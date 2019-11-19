@@ -1,0 +1,17 @@
+﻿
+@model IEnumerable<L7_L8.Models.Party>
+
+    <h3>Вы недавно смотрели:</h3>
+    @if (Model.Any())
+    {
+        <ul>
+            @foreach (var party in Model)
+            {
+                <li>@party.NameParty</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>Ничего :(</p>
+    }

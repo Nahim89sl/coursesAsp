@@ -1,0 +1,22 @@
+﻿@model IEnumerable<L7_L8.Models.Party>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Приветствуем всех!</h2>
+
+<h4>Представляем Вашему вниманию список надвигающихся вечеринок:</h4>
+
+<ul>
+    @foreach (var party in Model)
+    {
+        <li>
+            @Html.ActionLink(party.NameParty, "Index", "Party", new { id = party.IdParty }, null)
+        </li>
+    }
+</ul>
+
+<h2>Выбирай понравившуюся и присоединяйся!</h2>
+
+
+@Html.ActionLink("Добавить вечеринку", "NewParty", "Party")

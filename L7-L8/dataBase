@@ -1,0 +1,59 @@
+CREATE TABLE Roles (
+	idRole int NOT NULL AUTO_INCREMENT, 
+	role_name varchar(50) NOT NULL, 
+	PRIMARY KEY (id) 
+);
+
+CREATE TABLE Users (
+	id int NOT NULL AUTO_INCREMENT,
+	userName varchar(50) NOT NULL,
+	userSurname varchar(50),
+	email varchar(50) NOT NULL,
+	userRoleId int FOREING KEY REFERENCES Roles(idRole),
+	PRIMARY KEY (id)
+);
+
+
+CREATE TABLE Parties (
+	id int NOT NULL AUTO_INCREMENT,
+	title varchar(50) NOT NULL,
+	dateParty varchar(50),
+	ownerId int FOREING KEY REFERENCES Users(id),
+	PRIMARY KEY (id) 
+);
+
+
+CREATE TABLE Participants(
+	id int NOT NULL AUTO_INCREMENT,
+	nikName varchar(50) NOT NULL,
+	reason varchar(100) NOT NULL,
+	avatar varchar(50),
+	Atended bool NOT NULL,
+	partyId int FOREING KEY REFERENCES Parties(id),
+	userId int FOREING KEY REFERENCES Users(id),
+	PRIMARY KEY (id) 
+);
+
+
+CREATE TABLE Sponsors(
+	id int NOT NULL AUTO_INCREMENT,
+	nameSponsor varchar(50) NOT NULL,
+	PRIMARY KEY (id) 
+);
+
+CREATE TABLE sponsorsData(
+	id int NOT NULL,
+	logo varchar(50) NOT NULL,
+	location varchar(50) NOT NULL,
+	PRIMARY KEY (id), 
+	id int FOREING KEY REFERENCES sponsors(id),
+);
+
+CREATE TABLE sponsorsWork(
+	id int NOT NULL AUTO_INCREMENT,
+	budget varchar(50) NOT NULL,
+	PRIMARY KEY (id),
+	partyId int FOREING KEY REFERENCES Parties(id),
+	sponsorId int FOREING KEY REFERENCES Sponsors(id),	
+);
+

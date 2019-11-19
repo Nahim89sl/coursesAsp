@@ -1,0 +1,13 @@
+﻿@model L7_L8.Models.Party
+@{
+    ViewBag.Title = Model.NameParty;
+}
+
+<h2>@Model.NameParty</h2>
+
+<li>
+    @Html.ActionLink("Go Back", "Index", "Home")
+</li>
+
+
+@Html.Action("LastParties", "Party")

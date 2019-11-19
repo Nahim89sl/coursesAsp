@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "New party";
+}
+
+<h2>New party</h2>
+
+@using (Html.BeginForm("New", "Party", FormMethod.Post))
+{
+    <label>Название вечеринки</label>
+    <input type="text" name="nameParty" />
+    <br />
+
+    <label>Локация</label>
+    <input type="text" name="placeParty" />
+    <br />
+
+    <label>Дата мероприятия</label>
+    <input type="text" name="dateParty" />
+    <br />
+
+    <input type="submit" value="Создать" />
+}
